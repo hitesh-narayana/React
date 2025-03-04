@@ -1,4 +1,4 @@
-export default function CoreConcept(props) {
+function CoreConcept(props) {
     return (
       <li>
         <ul>
@@ -9,3 +9,5 @@ export default function CoreConcept(props) {
       </li>
     );
   }
+
+export default CoreConcept;
