@@ -5,14 +5,10 @@ import  TabButton  from "./components/TabButton.jsx";
 import {useState} from 'react'
 
 // let tabbutton = "Please click on" # Will not update the UI so we use concept of State
-let tabcontent = "Please click on"
-let [userState, setUserState] = useState(tabcontent)
 function App() {
-  
+  const [userData, setUserData] = useState("Please Click on ")
   let handleClick = (state) =>{
-    setUserState(
-      tabcontent=state
-    );
+    setUserData(state);
   }
   return (
     <div>
@@ -35,7 +31,7 @@ function App() {
             <TabButton onSelect={()=>handleClick('Props')}>Props</TabButton>
             <TabButton onSelect={()=>handleClick('State')}>State</TabButton>
           </menu>
-          {tabcontent}
+          {userData}
         </section>
       </main>
     </div>
