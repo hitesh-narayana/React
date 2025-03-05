@@ -1,6 +1,7 @@
 import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
 import {useState} from "react";
+import Section from "./Section";
 
 function Snippets() {
   const [userData, setUserData] = useState(null);
@@ -24,8 +25,7 @@ function Snippets() {
     );
   }
   return (
-    <section id="examples">
-      <h2>Snippets</h2>
+    <Section id="examples" title="Snippets">
       <menu>
         {tabs.map((tab) => (
           <TabButton
@@ -38,7 +38,7 @@ function Snippets() {
         ))}
       </menu>
       {tabContent}
-    </section>
+    </Section>
   );
 }
 
